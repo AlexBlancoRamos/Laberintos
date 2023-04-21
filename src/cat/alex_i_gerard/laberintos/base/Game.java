@@ -19,17 +19,14 @@ public class Game {
 
         char[][] tableroLaberinto1 = new char[11][12];
         Scanner scanner = new Scanner(System.in);
-        int labActual = 1;
         int vidas = Laberinto_1.getVidas();
         int movimentsMaxims = Laberinto_1.getMovimientosMaximos();
         int movimentsActuals = Jugador.getMovimientosActuales();
-
         int laberintosCompletados = 0;
 
 
         Jugador.nombreJugador(scanner);
         Lectura_Mostar_mapa.iniciarLaberinto1(tableroLaberinto1);
-
         System.out.println("Laberinto1 :");
 
         /**
