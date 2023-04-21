@@ -16,9 +16,6 @@ public class Laberintos {
         this.movimientosMaximos = movimientosMaximos;
     }
 
-    public static int getVidas() {
-        return 3;
-    }
 
     public void setVidas(int vidas) {
         this.vidas = vidas;
@@ -28,9 +25,6 @@ public class Laberintos {
         this.movimientosMaximos = movimientosMaximos;
     }
 
-    public static int getMovimientosMaximos() {
-        return 25;
-    }
 
 
 }

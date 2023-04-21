@@ -3,7 +3,6 @@ import cat.alex_i_gerard.laberintos.objects.*;
 import cat.alex_i_gerard.laberintos.ui.Escritura_FinalPartidas;
 import cat.alex_i_gerard.laberintos.ui.Lectura_Mostar_mapa;
 import cat.alex_i_gerard.laberintos.io.Movimientos;
-import cat.alex_i_gerard.laberintos.objects.Laberintos;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -21,8 +20,8 @@ public class Game {
         char[][] tableroLaberinto1 = new char[11][12];
         Scanner scanner = new Scanner(System.in);
         int labActual = 1;
-        int vidas = Laberintos.getVidas();
-        int movimentsMaxims = Laberintos.getMovimientosMaximos();
+        int vidas = Laberinto_1.getVidas();
+        int movimentsMaxims = Laberinto_1.getMovimientosMaximos();
         int movimentsActuals = Jugador.getMovimientosActuales();
 
         int laberintosCompletados = 0;
@@ -41,6 +40,7 @@ public class Game {
          */
 
         do{
+            System.out.println(vidas);
             boolean laberintoCompletado = Constants.isLaberintoCompletado();
             if(laberintoCompletado){
                 Escritura_FinalPartidas.guardarPuntuacioPartida(Jugador.getNom(), vidas, movimentsActuals);
