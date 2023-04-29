@@ -1,11 +1,10 @@
 package cat.alex_i_gerard.laberintos.objects;
 
+/**
+ * Clase laberintos que tiene los atributos que exporta a los otros laberintos
+ * i los getters de estos atributos
+ */
 public class Laberintos {
-
-    /**
-     * Clase laberintos que tiene los atributos que exporta a los otros laberintos
-     * i los getters de estos atributos
-     */
 
     private int vidas;
     private int movimientosMaximos;

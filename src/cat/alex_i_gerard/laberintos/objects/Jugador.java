@@ -2,12 +2,11 @@ package cat.alex_i_gerard.laberintos.objects;
 
 import java.util.Scanner;
 
+/**
+ * La Clase Jugador on trobem el nom y els moviments actuals amb
+ * els seus getters y setters y un metode per preguntar el seu nom.
+ */
 public class Jugador {
-
-    /**
-     * La Clase Jugador on trobem el nom y els moviments actuals amb
-     * els seus getters y setters y un metode per preguntar el seu nom.
-     */
 
     private static String nombre;
 

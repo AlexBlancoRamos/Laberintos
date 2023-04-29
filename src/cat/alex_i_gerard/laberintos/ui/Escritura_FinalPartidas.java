@@ -4,11 +4,18 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * En esta clase tenemos un metodo que guarda en un fitxero el nombre del jugador, sus vidas y los movimientos
+ * que ha utilizado para superar el laberinto.
+ */
 public class Escritura_FinalPartidas {
 
     /**
-     * En esta clase tenemos un metodo que guarda en un fitxero el nombre del jugador, sus vidas y los movimientos
-     * que ha utilizado para superar el laberinto.
+     * El metodo para guardar la partida
+     * @param nom
+     * @param vidas
+     * @param movimentsActuals
+     * @throws IOException
      */
 
     public static void guardarPuntuacioPartida(String nom, int vidas, int movimentsActuals) throws IOException

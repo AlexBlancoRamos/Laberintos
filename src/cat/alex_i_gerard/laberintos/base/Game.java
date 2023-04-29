@@ -7,15 +7,21 @@ import cat.alex_i_gerard.laberintos.io.Movimientos;
 import java.io.IOException;
 import java.util.Scanner;
 
-
+/**
+ * La clase game es la execucio del joc
+ */
 public class Game {
+    /**
+     * On podem trobar les variable necessaries per executar el joc
+     * Els primers metodes executats que no esta dintre del while son: La demanda del nom del jugador i la lectura del mapa.
+     * El while del game comienza comprobando si en el movimiento anterior ya has completado el laberinto justo despues comprueba si
+     * has hecho mas moviemientos de lo posibles justo despues pregunta que movimiento quieres hacer i suma 1 a tu contador de movimientos
+     * En caso de que hayas hecho mas movimientos de los posibles te dice que pierdes 1 vida y vuelves a empezar el laberinto.
+     * Y puedes salir del while si completas el laberinto o pierdes todas las vidas
+     */
     public static void main(String[] args) throws IOException {
 
-        /**
-         * La clase Game es la execucio del joc.
-         * On podem trobar les variable necessaries per executar el joc
-         * Els primers metodes executats que no esta dintre del while son: La demanda del nom del jugador i la lectura del mapa
-          */
+
 
         char[][] tableroLaberinto1 = new char[11][12];
         Scanner scanner = new Scanner(System.in);
@@ -29,15 +35,8 @@ public class Game {
         Lectura_Mostar_mapa.iniciarLaberinto1(tableroLaberinto1);
         System.out.println("Laberinto1 :");
 
-        /**
-         * El while del game comienza comprobando si en el movimiento anterior ya has completado el laberinto justo despues comprueba si
-         * has hecho mas moviemientos de lo posibles justo despues pregunta que movimiento quieres hacer i suma 1 a tu contador de movimientos
-         * En caso de que hayas hecho mas movimientos de los posibles te dice que pierdes 1 vida y vuelves a empezar el laberinto.
-         * Y puedes salir del while si completas el laberinto o pierdes todas las vidas
-         */
 
         do{
-            System.out.println(vidas);
             boolean laberintoCompletado = Constants.isLaberintoCompletado();
             if(laberintoCompletado){
                 Escritura_FinalPartidas.guardarPuntuacioPartida(Jugador.getNom(), vidas, movimentsActuals);

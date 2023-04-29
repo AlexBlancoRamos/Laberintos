@@ -3,14 +3,17 @@ package cat.alex_i_gerard.laberintos.ui;
 import java.io.*;
 import cat.alex_i_gerard.laberintos.base.Constants;
 
+/**
+ * Primero hay un metode que lee el laberinto i lo inici, donde tambien llamo a las constantes de filaActual i columnaActual
+ * del personaje para tener control de la posicion de esta.
+ * Y despues otro metodo para mostrar el mapa.
+ */
 public class Lectura_Mostar_mapa {
 
     /**
-     * Primero hay un metode que lee el laberinto i lo inici, donde tambien llamo a las constantes de filaActual i columnaActual
-     * del personaje para tener control de la posicion de esta.
-     * Y despues otro metodo para mostrar el mapa.
+     * El metodo para leer el mapa y guardar-lo en un array
+     * @param tableroLaberinto1
      */
-
     public static void iniciarLaberinto1(char[][] tableroLaberinto1){
 
         String line;
@@ -34,6 +37,10 @@ public class Lectura_Mostar_mapa {
             }
     }
 
+    /**
+     * El metodo para printar el mapa
+     * @param tableroLaberinto1
+     */
     public static void mostrarLaberinto1(char[][] tableroLaberinto1){
         for (int z = 0; z < tableroLaberinto1.length; z++) {
             for (int y = 0; y < tableroLaberinto1[z].length; y++) {

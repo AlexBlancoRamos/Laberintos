@@ -1,12 +1,10 @@
 package cat.alex_i_gerard.laberintos.base;
 
-
+/**
+ * En esta clase hay constantes que se necessitan actualizar en varias clases y se utilizan en varias clases.
+ * I necessitamos poder accedir desde diferentes clases.
+ */
 public class Constants {
-
-    /**
-     * En esta clase hay constantes que se necessitan actualizar en varias clases y se utilizan en varias clases.
-     * I necessitamos poder accedir desde diferentes clases.
-     */
 
     private static int filaActual = 0;
     private static int columnaActual= 0;
