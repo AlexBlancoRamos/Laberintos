@@ -1,4 +1,4 @@
-package cat.alex_i_gerard.laberintos.io;
+package cat.alex_i_gerard.laberintos;
 
 import cat.alex_i_gerard.laberintos.base.Constants;
 

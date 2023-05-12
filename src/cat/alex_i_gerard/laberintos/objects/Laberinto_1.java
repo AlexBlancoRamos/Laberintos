@@ -13,7 +13,6 @@ public class Laberinto_1 extends Laberintos {
         return 25;
     }
 
-
     public static int getVidas() {
         return 3;
     }

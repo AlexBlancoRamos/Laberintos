@@ -2,3 +2,7 @@ El jugador: Alex ha pasado el 1r laberinto con 3 vidas y en 19 movimientos.
 El jugador: Patata ha pasado el 1r laberinto con 3 vidas y en 18 movimientos.
 El jugador: pro ha pasado el 1r laberinto con 2 vidas y en 21 movimientos.
 El jugador: Alex ha pasado el 1r laberinto con 2 vidas y en 19 movimientos.
+El jugador: null ha pasado el 1r laberinto con 3 vidas y en 20 movimientos.
+El jugador: null ha pasado el 1r laberinto con 3 vidas y en 19 movimientos.
+El jugador: null ha pasado el 1r laberinto con 3 vidas y en 21 movimientos.
+El jugador: al ha pasado el 1r laberinto con 2 vidas y en 18 movimientos.

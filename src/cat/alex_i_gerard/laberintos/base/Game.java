@@ -2,7 +2,6 @@ package cat.alex_i_gerard.laberintos.base;
 import cat.alex_i_gerard.laberintos.objects.*;
 import cat.alex_i_gerard.laberintos.ui.Escritura_FinalPartidas;
 import cat.alex_i_gerard.laberintos.ui.Lectura_Mostar_mapa;
-import cat.alex_i_gerard.laberintos.io.Movimientos;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -19,19 +18,24 @@ public class Game {
      * En caso de que hayas hecho mas movimientos de los posibles te dice que pierdes 1 vida y vuelves a empezar el laberinto.
      * Y puedes salir del while si completas el laberinto o pierdes todas las vidas
      */
+
+    public static char[][] tableroLaberinto1 = new char[11][12];
     public static void main(String[] args) throws IOException {
 
 
-
-        char[][] tableroLaberinto1 = new char[11][12];
         Scanner scanner = new Scanner(System.in);
         int vidas = Laberinto_1.getVidas();
         int movimentsMaxims = Laberinto_1.getMovimientosMaximos();
         int movimentsActuals = Jugador.getMovimientosActuales();
         int laberintosCompletados = 0;
 
+        Monster m1 = new Monster(9, 1);
+        Jugador j1 = new Jugador(Constants.getFilaActual(),Constants.getColumnaActual());
 
-        Jugador.nombreJugador(scanner);
+        System.out.print("Introduce tu nombre: ");
+        String nombre = scanner.nextLine();
+
+        System.out.println(nombre +" es hora de jugar: ");
         Lectura_Mostar_mapa.iniciarLaberinto1(tableroLaberinto1);
         System.out.println("Laberinto1 :");
 
@@ -39,12 +43,13 @@ public class Game {
         do{
             boolean laberintoCompletado = Constants.isLaberintoCompletado();
             if(laberintoCompletado){
-                Escritura_FinalPartidas.guardarPuntuacioPartida(Jugador.getNom(), vidas, movimentsActuals);
+                Escritura_FinalPartidas.guardarPuntuacioPartida(nombre, vidas, movimentsActuals);
                 laberintosCompletados++;
             }
             else if(movimentsActuals < movimentsMaxims){
                 Lectura_Mostar_mapa.mostrarLaberinto1(tableroLaberinto1);
-                Movimientos.movimientos(tableroLaberinto1);
+                j1.move();
+                m1.move();
                 movimentsActuals++;
             }
             else{

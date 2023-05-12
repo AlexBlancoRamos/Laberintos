@@ -2,6 +2,8 @@ package cat.alex_i_gerard.laberintos.ui;
 
 import java.io.*;
 import cat.alex_i_gerard.laberintos.base.Constants;
+import cat.alex_i_gerard.laberintos.objects.Monster;
+
 
 /**
  * Primero hay un metode que lee el laberinto i lo inici, donde tambien llamo a las constantes de filaActual i columnaActual
@@ -28,6 +30,10 @@ public class Lectura_Mostar_mapa {
                         if (tableroLaberinto1[i][j] == 'X') {
                             Constants.setFilaActual(i);
                             Constants.setColumnaActual(j);
+                        }
+                        if (tableroLaberinto1[i][j] == 'M'){
+                            //Monster.setFila(i);
+                            //Monster.setColumna(j);
                         }
                     }
                     i += 1;
